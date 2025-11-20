@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VUZOLL - Settings</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="app-container">
         
@@ -41,44 +43,43 @@
             </nav>
         </aside>
 
-        <div class="main-area">
+<div class="main-area">
+        
+        <header class="main-header">
+            Settings
+        </header>
+
+        <main class="settings-content">
             
-            <header class="main-header">
-                Settings
-            </header>
+            <section class="settings-section">
+                <div class="section-card">
+                    <h2>Personal Information</h2>
 
-            <main class="settings-content">
-                <section class="settings-section">
-                    <div class="section-card">
-                        <h2>Personal Information</h2>
+                    <div class="form-grid">
 
-                        <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Sophia">
+                        </div>
 
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" value="Sophia">
-                            </div>
+                        <div class="form-group">
+                            <label for="surname">Surname</label>
+                            <input type="text" id="surname" placeholder="Miller">
+                        </div>
 
-                            <div class="form-group">
-                                <label for="surname">Surname</label>
-                                <input type="text" id="surname" value="Miller">
-                            </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="sophia.miller@email.com">
+                        </div>
 
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" value="sophia.miller@email.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" value="+1 (066) 789-6052">
-                            </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+1 (066) 789-6052">
                         </div>
                     </div>
                 </section>
-                  <div class="section-card notifications-card">
-                            <h2>Notifications and Toggles</h2>
-
+                 <div class="section-card notifications-card">
+                            <h2>Notifications</h2>
                             <div class="notification-list">
                                 <label class="custom-switch-label">
                                     Allow email notifications
@@ -95,7 +96,6 @@
                                         <span class="custom-slider-ball"></span>
                                     </span>
                                 </label>
-
                                 <label class="custom-switch-label">
                                     Allow Push notifications
                                     <input type="checkbox" class="visually-hidden" checked>
@@ -103,16 +103,18 @@
                                         <span class="custom-slider-ball"></span>
                                     </span>
                                 </label>
-
-
                                 </span>
                                 </label>
                             </div>
                         </div>
 
                     </section>
+                </div>
+            </section>
+            
             </main>
-        </div>
+    </div>
     </div>
 </body>
+
 </html>
