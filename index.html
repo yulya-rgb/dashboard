@@ -111,6 +111,56 @@
                         </div>
 
                     </section>
+                    <section class="settings-section integrations-section-grid">
+                        <div class="crm-box">
+                            <h2>Your CRM</h2>
+
+                            <div class="section-card crm-card-wrapper">
+                                <div class="crm-content">
+                                    <span class="active-badge">Active</span>
+
+                                    <div class="crm-header-row">
+                                        <div class="crm-status">
+                                            <span class="crm-icon">🔗</span> Your CRM
+                                        </div>
+                                        <span class="dots">⋮</span>
+                                    </div>
+
+                                    <hr class="crm-separator">
+
+                                    <p class="crm-description">
+                                        Sync your CRM data for more personalized customer interactions.
+                                    </p>
+
+                                    <button class="disconnect-button"
+                                        onclick="document.getElementById('crmModal').style.display='flex'">
+                                        <span class="disconnect-icon">⛌</span> Disconnect
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="language-box">
+                            <h2>Language</h2>
+
+                            <div class="custom-dropdown-container">
+                                <input type="checkbox" id="language-toggle" class="visually-hidden">
+
+                                <label for="language-toggle" class="dropdown-selector" tabindex="0">
+                                    English
+                                    <span class="dropdown-arrow"></span>
+                                </label>
+
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-item">English</li>
+                                    <li class="dropdown-item">Ukrainian</li>
+                                    <li class="dropdown-item">Spanish</li>
+                                    <li class="dropdown-item">French</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </main>
         </div>
     </div>
