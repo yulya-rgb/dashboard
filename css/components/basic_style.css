@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
     display: flex;           
     flex-direction: row;     
     min-height: 100vh;
-    background-color: var(--color-text-dark); 
+    background-color: var(--color-bg-main);
     color: var(--color-white);
     font-family: 'Lato', sans-serif;
     margin: 0;
