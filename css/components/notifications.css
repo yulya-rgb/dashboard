@@ -20,6 +20,7 @@
     cursor: pointer;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .checkbox_group:hover {
     border-color: var(--color-text-grey);
     box-shadow: 0 0 0 1px var(--color-text-grey);

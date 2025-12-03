@@ -1,12 +1,3 @@
-.notifications-block {
-    max-width: 690px;
-    margin-left: 24px;
-    margin-right: 24px;
-}
-
-.notifications_block .block_title {
-    margin-bottom: 20px;
-}
 
 .checkbox_group {
     flex: 1 1 calc(50% - 10px);
