@@ -5,8 +5,10 @@
 }
 
 body {
-    height: 100vh;
-    margin: 0;
+    height: 100%;      
+    margin: 0;         
+    padding: 0;
+    box-sizing: border-box;
     background-color: black;
     color: var(--color-white);
     font-family: 'Lato', sans-serif;
