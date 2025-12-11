@@ -29,3 +29,9 @@
         max-width: 100%;
     }
 }
+@media (max-width: 768px) {
+    .input_row {
+        flex-direction: column;
+        gap: 16px;
+    }
+}

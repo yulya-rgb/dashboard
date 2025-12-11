@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -17,14 +17,14 @@
     <aside class="side-bar">
         <nav class="menu">
             <a href="#" class="menu_logo">
-                <img src="img/header/Logo.svg" alt="">
+                <img src="img/header/Logo.svg" alt="Logo">
             </a>
 
             <ul class="menu_inbox">
                 <li class="menu_item">
                     <a href="#" class="menu_link">
                         <img src="img/header/Inbox icon.svg" alt="Inbox">
-                        <span>Inbox <br> 5 open tickets</span>
+                        <span>Inbox <br> <span style="font-size: 14px; opacity: 0.7;">5 open tickets</span></span>
                     </a>
                 </li>
             </ul>
@@ -63,7 +63,7 @@
                     </a>
                 </li>
 
-                <li class="admin_item">
+                <li class="admin_item active">
                     <a href="#" class="admin_link">
                         <img src="img/header/solar_settings-linear.svg" alt="Settings">
                         <span>Settings</span>
@@ -79,73 +79,72 @@
             <h1 class="Settings_title">Settings</h1>
         </header>
 
-        <section class="settings-section border">
+        <div class="content-scroll-area">
+            
+            <section class="settings-section border">
+                <h2 class="block_title">Personal Information</h2>
 
-            <h2 class="block_title">Personal Information</h2>
+                <div class="input_group_container">
+                    <div class="input_row">
+                        <div class="input_group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Sophia">
+                        </div>
 
-            <div class="input_group_container">
-                <div class="input_group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Sophia">
+                        <div class="input_group">
+                            <label for="surname">Surname</label>
+                            <input type="text" id="surname" placeholder="Miller">
+                        </div>
+                    </div>
+
+                    <div class="input_row">
+                        <div class="input_group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="sophia.miller@email.com">
+                        </div>
+
+                        <div class="input_group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" placeholder="+1 (066) 789-6052">
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="input_group">
-                    <label for="surname">Surname</label>
-                    <input type="text" id="surname" placeholder="Miller">
-                </div>
+            <section class="settings-section border">
+                <h2 class="block_title">Notifications</h2>
 
-                <div class="input_group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="sophia.miller@email.com">
-                </div>
+                <label class="checkbox_group">
+                    <div class="toggle_switch">
+                        <input type="checkbox" id="email_notifications" checked>
+                        <span class="slider round"></span>
+                    </div>
+                    <span class="label-text">Allow email notifications</span>
+                </label>
 
-                <div class="input_group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" id="phone" placeholder="+1 (066) 789-6052">
-                </div>
-            </div>
+                <label class="checkbox_group">
+                    <div class="toggle_switch">
+                        <input type="checkbox" id="sms_notifications" checked>
+                        <span class="slider round"></span>
+                    </div>
+                    <span class="label-text">Allow SMS notifications</span>
+                </label>
 
-        </section>
+                <label class="checkbox_group">
+                    <div class="toggle_switch">
+                        <input type="checkbox" id="push_notifications">
+                        <span class="slider round"></span>
+                    </div>
+                    <span class="label-text">Allow Push notifications</span>
+                </label>
+            </section>
 
-        <section class="settings-section border">
+            <section class="settings-section no-border-bg">
+                <div class="Settings_block_Settings_flex_container">
 
-            <h2 class="block_title">Notifications</h2>
-
-            <label class="checkbox_group">
-                <div class="toggle_switch">
-                    <input type="checkbox" id="email_notifications" checked>
-                    <span class="slider round"></span>
-                </div>
-                <span class="label-text">Allow email notifications</span>
-            </label>
-
-            <label class="checkbox_group">
-                <div class="toggle_switch">
-                    <input type="checkbox" id="sms_notifications" checked>
-                    <span class="slider round"></span>
-                </div>
-                <span class="label-text">Allow SMS notifications</span>
-            </label>
-
-            <label class="checkbox_group">
-                <div class="toggle_switch">
-                    <input type="checkbox" id="push_notifications">
-                    <span class="slider round"></span>
-                </div>
-                <span class="label-text">Allow Push notifications</span>
-            </label>
-
-        </section>
-
-        <section class="settings-section">
-
-            <div class="Settings_block_Settings_flex_container">
-
-                <div class="crm_section">
-                    <h2 class="block_title_Your_CRM">Your CRM</h2>
-
-                    <div class="crm_block_wrapper">
-                        <div class="border">
+                    <div class="crm_section flex-item">
+                        <h2 class="block_title">Your CRM</h2>
+                        <div class="border card-inner">
                             <div class="card_header">
                                 <div class="card_title_and_status">
                                     <img src="img/ic/Icon filled Connection.svg" alt="CRM Icon">
@@ -162,103 +161,104 @@
                             </p>
 
                             <button class="disconnect_button">
-                                <img src="img/ic/Basic icons.svg" alt="">Disconnect
+                                <img src="img/ic/Basic icons.svg" alt=""> Disconnect
                             </button>
                         </div>
                     </div>
-                </div>
 
-                <div class="language_block_wrapper">
-                    <div class="language_section">
-                        <h2 class="block_title_Language">Language</h2>
-
-                        <div class="border">
+                    <div class="language_section flex-item">
+                        <h2 class="block_title">Language</h2>
+                        <div class="select-wrapper">
                             <select id="language_select">
-                                <option value="uk" selected>Ukrainian</option>
-                                <option value="en">English</option>
+                                <option value="en" selected>English</option>
+                                <option value="uk">Ukrainian</option>
                             </select>
                             <div class="custom_select_arrow">
                                 <img src="img/ic/chevron_right_24dp_383838_FILL0_wght400_GRAD0_opsz48 1.svg" alt="">
                             </div>
                         </div>
-
                     </div>
+
                 </div>
-<div class=""></div>
-            </div>
-             <div class="modal-backdrop" id="disconnectModal">
-                <a href="#" class="modal-close-area" aria-hidden="true"></a>
+            </section>
 
-                <div class="modal-container">
-                    <div class="modal-header">
-                        <h3>Create a connection</h3>
-                        <a href="#" class="close-button" aria-label="Close modal"><img
-                                src="img/header/Basic icons (1).svg" alt=""></a>
-                    </div>
-
-                    <div class="modal-body">
-                        <input type="text" class="input-field" placeholder="Connection name">
-                        <input type="text" class="input-field" placeholder="API key">
-                    </div>
-
-                    <div class="modal-footer">
-                        <button class="save-button">
-                            <span class="icon"><img src="img/header/Basic icons (2).svg" alt=""></span> Save
-                        </button>
-
-                        <a href="#" class="button cancel-button">
-                            <span class="icon"><img src="img/header/Basic icons (1).svg" alt=""></span> Cancel
-                        </a>
-                    </div>
-                </div>
-            </div>
-             <div class="select-box">
+            <section class="settings-section no-border-bg extra-components-section">
+                
+                <div class="extra-component-wrapper">
+                    
+                    <div class="select-box">
                         <div class="select-box__current" tabindex="1">
+                            
                             <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="opt-1" value="admin" name="role">
+                                <input class="select-box__input" type="radio" id="role-default" value="" name="role" checked="checked">
+                                <p class="select-box__input-text">Select role</p>
+                            </div>
+                            
+                            <div class="select-box__value">
+                                <input class="select-box__input" type="radio" id="role-admin" value="admin" name="role">
                                 <p class="select-box__input-text">Admin</p>
                             </div>
                             <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="opt-2" value="finances" name="role">
+                                <input class="select-box__input" type="radio" id="role-finances" value="finances" name="role">
                                 <p class="select-box__input-text">Finances</p>
                             </div>
                             <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="opt-3" value="agent" name="role">
+                                <input class="select-box__input" type="radio" id="role-agent" value="agent" name="role">
                                 <p class="select-box__input-text">Agent</p>
                             </div>
                             <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="opt-4" value="view" name="role">
+                                <input class="select-box__input" type="radio" id="role-view" value="view" name="role">
                                 <p class="select-box__input-text">View</p>
                             </div>
-                            <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="opt-0" value="" name="role" checked="checked">
-                                <p class="select-box__input-text">Select role</p>
+                            
+                            <div class="select-box__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
-                            <img class="select-box__icon" src="img/ic/chevron_right_24dp_383838_FILL0_wght400_GRAD0_opsz48 1.svg" alt="Arrow Icon" aria-hidden="true">
                         </div>
+                        
                         <ul class="select-box__list">
-                            <li>
-                                <label class="select-box__option" for="opt-1" aria-hidden="aria-hidden">Admin</label>
-                            </li>
-                            <li>
-                                <label class="select-box__option" for="opt-2" aria-hidden="aria-hidden">Finances</label>
-                            </li>
-                            <li>
-                                <label class="select-box__option" for="opt-3" aria-hidden="aria-hidden">Agent</label>
-                            </li>
-                            <li>
-                                <label class="select-box__option" for="opt-4" aria-hidden="aria-hidden">View</label>
-                            </li>
+                            <li><label class="select-box__option" for="role-admin">Admin</label></li>
+                            <li><label class="select-box__option" for="role-finances">Finances</label></li>
+                            <li><label class="select-box__option" for="role-agent">Agent</label></li>
+                            <li><label class="select-box__option" for="role-view">View</label></li>
                         </ul>
-             </div>
-                
-        
+                    </div>
 
-        </section>
+                </div>
 
+                <div class="extra-component-wrapper">
+                    <div class="modal-backdrop embedded" id="disconnectModal">
+                        <div class="modal-header">
+                            <h3>Create a connection</h3>
+                            <a href="#" class="close-button" aria-label="Close modal">
+                                <img src="img/header/Basic icons (1).svg" alt="Close">
+                            </a>
+                        </div>
+
+                        <div class="modal-body">
+                            <input type="text" class="input-field" placeholder="Connection name">
+                            <input type="text" class="input-field" placeholder="API key">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="save-button">
+                                <span class="icon"><img src="img/header/Basic icons (2).svg" alt=""></span> Save
+                            </button>
+
+                            <a href="#" class="button cancel-button">
+                                <span class="icon"><img src="img/header/Basic icons (1).svg" alt=""></span> Cancel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            
+            <div class="spacer-bottom"></div>
+        </div>
     </main>
 </div>
-
 </body>
-
 </html>
